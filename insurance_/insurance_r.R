@@ -8,3 +8,7 @@ tail(df) # Ultimas Linhas
 summary(df)
 
 hist(df$age)
+
+hist(df$charges)
+
+boxplot(df$bmi)
