@@ -1,0 +1,13 @@
+Function RemoveAcentos(caracteres As String)
+Dim A As String * 1
+Dim B As String * 1
+Dim i As Integer
+Const Com_Acento = "ŠŽšžŸÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖÙÚÛÜÝàáâãäåèéêëìíîïðñòóôõöùúûüýÿ"
+Const Sem_Acento = "SZszYAAAAAACEEEEIIIIDNOOOOOUUUUYaaaaaaeeeeiiiidnooooouuuuyy"
+For i = 1 To Len(Com_Acento)
+A = Mid(Com_Acento, i, 1)
+B = Mid(Sem_Acento, i, 1)
+caracteres = Replace(caracteres, A, B)
+Next
+RemoveAcentos = caracteres
+End Function
